@@ -1,9 +1,8 @@
 # development configuration
-
 spring:
-   config:
-      activate:
-         on-profile: development
+   devtools:
+      livereload:
+         enabled: true
 
 logging:
    pattern:

@@ -1,14 +1,10 @@
 # configuration: production
 spring:
-   config:
-      activate:
-         on-profile: production
-
    datasource:
       driver-class-name: org.mariadb.jdbc.Driver
       url: jdbc:mariadb://192.168.64.7:3306/webdb?characterEncoding=utf8
       username: webdb
-      password: '{cipher}AQCo9bK6bvblpsMz9jo16XUMEb1/uXxuFj9QTmPdWpqFh8Nd5CP9A9dqzAzBLQLKtI+TC6crhkd3Kz5vk8RZcFGMCTuMzxDS87sj+PRcuSJZ5/Xk7neSsse+0TOkrU2iPYcmiumoX4DumW6cwiC1jCJif5kVMYVCDFkUeSRc4UcpdvdkxCBhIjakGSh/2hlhuEPP6xHddzRZkC+09SkoaNOLo12HV0vmvnErASM7Y3VLybvLdxYzhaOuFAb+zHEhqyR7/YmCGWBoI9QkebxxRgNbbUw8NRSOuhwXAy1fwPH+Q+xxbWbplBKtcrG/Jur1jY5zQGZSq/SuyGuXqVvUdYzTnq5S6BN/GypcCdcKcoV5ot5acq4m1b1Yv4wX2+mJ4w4='
+      password: '{cipher}AQBVLBaxB/8hfXr+ByYUwyvbSUVbhrxwleH42c0jXRfUosrdVO1oEo2oFypygqBPe8whZml0jVGFkV9/ExO/NoXEQLkGvoKto1nOYh3F/0kqODGxzjDYzKKu0wlrFfZpo7QeR4DPWQwTfGv9hjQMZvs3hJW5S8E773ITd2+VykLBiZQg7HhHDYCwQprLCdvkfTHz/QQDs953sWWt68IZEEihv9tEJ5+FUzvXaIh23+MnwEfT4IV1LnEwzSn64a819EIMRFKRvTuBMSOmPOiD/O/uTd4g9MU34lM+UeVBfZiVRtAKKA5/F1LfcTfwQ/e0EvluQqpItkYU1xofVzBH3DeWw4oVBF8jvbFawsSR+dNUffCHqcjmUdcWjJ4F3N2wsco='
       hikari:
          minimum-idle: 10
          maximum-pool-size: 20 
@@ -20,7 +16,7 @@ eureka:
       fetchRegistry: true
       registerWithEureka: true
       serviceUrl:
-         defaultZone: http://192.168.64.7:8761/eureka
+         defaultZone: http://192.168.66.4:8761/eureka
 
 logging:
    pattern:
@@ -39,4 +35,4 @@ logging:
             msa:
                service:
                   emaillist:
-                     exception: ERROR       
+                     exception: ERROR
